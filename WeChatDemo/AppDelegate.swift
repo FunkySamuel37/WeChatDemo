@@ -120,6 +120,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func login()-> Bool{
+        if NSUserDefaults.standardUserDefaults().stringForKey("username") != nil {
+            return true
+        } else {
+            return false
+        }
+    }
 
 }
 

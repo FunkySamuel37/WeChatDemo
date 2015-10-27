@@ -14,6 +14,7 @@
 		D90D7D041BDE56AA000EB332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90D7D021BDE56AA000EB332 /* LaunchScreen.storyboard */; };
 		D940C2D31BDF63990033F221 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940C2D21BDF63990033F221 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D940C2D51BDF67A70033F221 /* TextBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940C2D41BDF67A70033F221 /* TextBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
+		D940C2D91BDF90860033F221 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940C2D81BDF90860033F221 /* RootTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D90D7D051BDE56AA000EB332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D940C2D21BDF63990033F221 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D940C2D41BDF67A70033F221 /* TextBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBackgroundView.swift; sourceTree = "<group>"; };
+		D940C2D81BDF90860033F221 /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				D940C2D21BDF63990033F221 /* LoginViewController.swift */,
+				D940C2D81BDF90860033F221 /* RootTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D940C2D31BDF63990033F221 /* LoginViewController.swift in Sources */,
+				D940C2D91BDF90860033F221 /* RootTabBarController.swift in Sources */,
 				D90D7CFF1BDE56AA000EB332 /* WeChatDemo.xcdatamodeld in Sources */,
 				D90D7CF71BDE56AA000EB332 /* AppDelegate.swift in Sources */,
 				D940C2D51BDF67A70033F221 /* TextBackgroundView.swift in Sources */,

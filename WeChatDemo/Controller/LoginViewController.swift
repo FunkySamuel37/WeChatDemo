@@ -8,17 +8,24 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
 
+    @IBOutlet weak var rootScrollV: UIScrollView!
+    @IBOutlet weak var backgroundImageV: UIImageView!
+    @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var textBackView: TextBackgroundView!
-    @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
+
+    
+    let screen:CGRect! = UIScreen.mainScreen().bounds
+    var isEditing:Bool! = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.delegate = self
-        passwordTextField.delegate = self
+
+        self.rootScrollV.contentSize = CGSize(width: self.screen.width, height: self.screen.height + 600)
 //        self.passwordTextField.secureTextEntry
         // Do any additional setup after loading the view.
     }
@@ -45,9 +52,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     */
 
     @IBAction func loginBtnClick(sender: AnyObject) {
+        if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
+            let alert = UIAlertView(title: "登录失败!", message: "账号或者密码错误", delegate: nil, cancelButtonTitle: "Ok")
+            alert.show()
+            
+            return
+        } else {
+            let trimUserName = self.userNameTextField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let trimPassword = self.passwordTextField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        }
+        
         self.dismissViewControllerAnimated(true) { () -> Void in
             
         }
+        
+//        (UIApplication.sharedApplication().delegate as! AppDelegate).login()
     }
 }
 
@@ -65,4 +84,37 @@ extension LoginViewController{
         
         return false
     }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            self.loginLabel.frame.origin.y += 50
+            self.textBackView.frame.origin.y += 100
+            self.loginBtn.frame.origin.y += 100
+            }) { (_) -> Void in
+                self.isEditing = !self.isEditing
+        }
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            self.loginLabel.frame.origin.y -= 50
+            self.textBackView.frame.origin.y -= 100
+            self.loginBtn.frame.origin.y -= 100
+            }) { (_) -> Void in
+            self.isEditing = !self.isEditing
+        }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        let offset = scrollView.contentOffset.y / 2
+        
+        let transform = CGAffineTransformMakeTranslation(0, offset)
+        self.backgroundImageV.transform = transform
+        
+        self.userNameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
+    
 }
