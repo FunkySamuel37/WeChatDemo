@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D90D7CF71BDE56AA000EB332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D7CF61BDE56AA000EB332 /* AppDelegate.swift */; };
-		D90D7CF91BDE56AA000EB332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D7CF81BDE56AA000EB332 /* ViewController.swift */; };
 		D90D7CFC1BDE56AA000EB332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90D7CFA1BDE56AA000EB332 /* Main.storyboard */; };
 		D90D7CFF1BDE56AA000EB332 /* WeChatDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90D7CFD1BDE56AA000EB332 /* WeChatDemo.xcdatamodeld */; };
 		D90D7D011BDE56AA000EB332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90D7D001BDE56AA000EB332 /* Assets.xcassets */; };
 		D90D7D041BDE56AA000EB332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90D7D021BDE56AA000EB332 /* LaunchScreen.storyboard */; };
+		D940C2D31BDF63990033F221 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940C2D21BDF63990033F221 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D940C2D51BDF67A70033F221 /* TextBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940C2D41BDF67A70033F221 /* TextBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D90D7CF31BDE56AA000EB332 /* WeChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90D7CF61BDE56AA000EB332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D90D7CF81BDE56AA000EB332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D90D7CFB1BDE56AA000EB332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D90D7CFE1BDE56AA000EB332 /* WeChatDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeChatDemo.xcdatamodel; sourceTree = "<group>"; };
 		D90D7D001BDE56AA000EB332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D90D7D031BDE56AA000EB332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D90D7D051BDE56AA000EB332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D940C2D21BDF63990033F221 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D940C2D41BDF67A70033F221 /* TextBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				D90D7CF61BDE56AA000EB332 /* AppDelegate.swift */,
-				D90D7CF81BDE56AA000EB332 /* ViewController.swift */,
 				D90D7CFA1BDE56AA000EB332 /* Main.storyboard */,
 				D90D7D0B1BDE56DB000EB332 /* Controller */,
 				D90D7D0C1BDE56F0000EB332 /* View */,
@@ -73,6 +74,7 @@
 		D90D7D0B1BDE56DB000EB332 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D940C2D21BDF63990033F221 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -80,6 +82,7 @@
 		D90D7D0C1BDE56F0000EB332 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D940C2D41BDF67A70033F221 /* TextBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90D7CF91BDE56AA000EB332 /* ViewController.swift in Sources */,
+				D940C2D31BDF63990033F221 /* LoginViewController.swift in Sources */,
 				D90D7CFF1BDE56AA000EB332 /* WeChatDemo.xcdatamodeld in Sources */,
 				D90D7CF71BDE56AA000EB332 /* AppDelegate.swift in Sources */,
+				D940C2D51BDF67A70033F221 /* TextBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				D90D7D0A1BDE56AA000EB332 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

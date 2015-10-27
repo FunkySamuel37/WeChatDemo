@@ -17,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let familyNames = NSArray(array: UIFont.familyNames())
+//        
+//        for i in 0..<familyNames.count {
+//            let familyName = familyNames[i] as! String
+//            print("=========FamilyName:" + familyName + "=========")
+//            let fontNames = NSArray(array: UIFont.fontNamesForFamilyName(familyName))
+//            
+//            for j in 0..<fontNames.count {
+//                print(fontNames[j] as! String)
+//            }
+//            
+//        }
+        
         return true
     }
 
