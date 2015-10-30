@@ -10,24 +10,28 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
 
-    @IBOutlet weak var rootScrollV: UIScrollView!
     @IBOutlet weak var backgroundImageV: UIImageView!
+    @IBOutlet weak var rootScrollV: UIScrollView!
+//    @IBOutlet weak var backgroundImageV: UIImageView!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var textBackView: TextBackgroundView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
 
+    @IBOutlet weak var loginBtnToBottom: NSLayoutConstraint!
     
+    @IBOutlet weak var textBackViewWidth: NSLayoutConstraint!
     let screen:CGRect! = UIScreen.mainScreen().bounds
     var isEditing:Bool! = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.rootScrollV.contentSize = CGSize(width: self.screen.width, height: self.screen.height + 600)
-//        self.passwordTextField.secureTextEntry
-        // Do any additional setup after loading the view.
+        self.loginBtnToBottom.constant = self.screen.height - self.textBackView.frame.origin.y - self.textBackView.frame.height - 8 - 40
+        self.textBackViewWidth.constant = self.screen.width - 60
+//        self.rootScrollV.contentSize = CGSize(width: self.screen.width, height: self.screen.height + 10)
+        print(self.rootScrollV.contentSize.width)
+        
     }
 
     
@@ -87,9 +91,9 @@ extension LoginViewController{
     
     func textFieldDidEndEditing(textField: UITextField) {
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            self.loginLabel.frame.origin.y += 50
+            self.loginLabel.frame.origin.y   += 50
             self.textBackView.frame.origin.y += 100
-            self.loginBtn.frame.origin.y += 100
+            self.loginBtn.frame.origin.y     += 100
             }) { (_) -> Void in
                 self.isEditing = !self.isEditing
         }
@@ -98,9 +102,9 @@ extension LoginViewController{
     func textFieldDidBeginEditing(textField: UITextField) {
         
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            self.loginLabel.frame.origin.y -= 50
+            self.loginLabel.frame.origin.y   -= 50
             self.textBackView.frame.origin.y -= 100
-            self.loginBtn.frame.origin.y -= 100
+            self.loginBtn.frame.origin.y     -= 100
             }) { (_) -> Void in
             self.isEditing = !self.isEditing
         }
@@ -108,9 +112,9 @@ extension LoginViewController{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        let offset = scrollView.contentOffset.y / 2
-        
+        let offset    = scrollView.contentOffset.y / 2
         let transform = CGAffineTransformMakeTranslation(0, offset)
+        
         self.backgroundImageV.transform = transform
         
         self.userNameTextField.resignFirstResponder()

@@ -19,8 +19,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfg-Jj-xfy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background_00" translatesAutoresizingMaskIntoConstraints="NO" id="hsg-sJ-xR9">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_background_00" translatesAutoresizingMaskIntoConstraints="NO" id="Oh4-7m-uvn">
+                                        <rect key="frame" x="-100" y="-100" width="520" height="768"/>
                                         <animations/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-ke-U1Q" customClass="TextBackgroundView" customModule="WeChatDemo" customModuleProvider="target">
@@ -62,6 +62,7 @@
                                             <constraint firstItem="i4e-CZ-KOJ" firstAttribute="leading" secondItem="bL5-ke-U1Q" secondAttribute="leading" constant="15" id="Cxh-2S-bYN"/>
                                             <constraint firstItem="Jo2-cy-eIY" firstAttribute="top" secondItem="i4e-CZ-KOJ" secondAttribute="bottom" constant="6" id="DZq-Lk-cMb"/>
                                             <constraint firstItem="Jo2-cy-eIY" firstAttribute="centerY" secondItem="bL5-ke-U1Q" secondAttribute="centerY" id="M9s-mh-I2M"/>
+                                            <constraint firstAttribute="width" constant="260" id="O6d-5j-rWk"/>
                                             <constraint firstItem="gHY-Dg-gzD" firstAttribute="leading" secondItem="bL5-ke-U1Q" secondAttribute="leading" constant="15" id="Oww-P4-GtP"/>
                                             <constraint firstAttribute="bottom" secondItem="gHY-Dg-gzD" secondAttribute="bottom" constant="8" id="UwI-h0-SVM"/>
                                             <constraint firstItem="Jo2-cy-eIY" firstAttribute="centerX" secondItem="bL5-ke-U1Q" secondAttribute="centerX" id="c87-gz-hmi"/>
@@ -71,10 +72,10 @@
                                             <constraint firstAttribute="height" constant="100" id="un1-0n-GV2"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-Sk-FCI">
-                                        <rect key="frame" x="105" y="114" width="110" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-Sk-FCI">
+                                        <rect key="frame" x="0.0" y="82" width="320" height="75"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="60"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -97,21 +98,22 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="hsg-sJ-xR9" firstAttribute="top" secondItem="Cfg-Jj-xfy" secondAttribute="top" id="2dy-yM-uYM"/>
-                                    <constraint firstItem="7Bw-Sk-FCI" firstAttribute="centerX" secondItem="Cfg-Jj-xfy" secondAttribute="centerX" id="9X1-gT-U8h"/>
-                                    <constraint firstItem="hsg-sJ-xR9" firstAttribute="centerY" secondItem="Cfg-Jj-xfy" secondAttribute="centerY" id="Ed4-bh-q8Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="hsg-sJ-xR9" secondAttribute="bottom" id="H8X-MZ-A8X"/>
-                                    <constraint firstItem="bL5-ke-U1Q" firstAttribute="centerY" secondItem="Cfg-Jj-xfy" secondAttribute="centerY" id="MTe-Z4-bmw"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Bw-Sk-FCI" secondAttribute="trailing" id="9pj-ly-zWR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oh4-7m-uvn" secondAttribute="trailing" constant="-100" id="KpP-Se-YnI"/>
                                     <constraint firstItem="bL5-ke-U1Q" firstAttribute="leading" secondItem="Cfg-Jj-xfy" secondAttribute="leading" constant="30" id="Pg1-3G-gsG"/>
+                                    <constraint firstAttribute="bottom" secondItem="u22-zX-lj8" secondAttribute="bottom" constant="184" id="QTv-XT-b2s"/>
                                     <constraint firstItem="u22-zX-lj8" firstAttribute="leading" secondItem="bL5-ke-U1Q" secondAttribute="leading" id="Qlo-D1-Wcg"/>
-                                    <constraint firstItem="hsg-sJ-xR9" firstAttribute="top" secondItem="7Bw-Sk-FCI" secondAttribute="bottom" constant="-163" id="Vnr-md-2VJ"/>
                                     <constraint firstItem="u22-zX-lj8" firstAttribute="trailing" secondItem="bL5-ke-U1Q" secondAttribute="trailing" id="YUM-PQ-nkz"/>
                                     <constraint firstItem="u22-zX-lj8" firstAttribute="top" secondItem="bL5-ke-U1Q" secondAttribute="bottom" constant="8" id="ZDV-87-6Ro"/>
                                     <constraint firstAttribute="trailing" secondItem="bL5-ke-U1Q" secondAttribute="trailing" constant="30" id="dHq-jr-kEA"/>
-                                    <constraint firstAttribute="trailing" secondItem="hsg-sJ-xR9" secondAttribute="trailing" id="dRk-Pl-FW1"/>
-                                    <constraint firstItem="hsg-sJ-xR9" firstAttribute="centerX" secondItem="Cfg-Jj-xfy" secondAttribute="centerX" id="fvG-7x-cKv"/>
-                                    <constraint firstItem="hsg-sJ-xR9" firstAttribute="leading" secondItem="Cfg-Jj-xfy" secondAttribute="leading" id="nrI-Eh-YxT"/>
+                                    <constraint firstItem="7Bw-Sk-FCI" firstAttribute="leading" secondItem="Cfg-Jj-xfy" secondAttribute="leading" id="dOO-PZ-ks8"/>
+                                    <constraint firstItem="bL5-ke-U1Q" firstAttribute="top" secondItem="7Bw-Sk-FCI" secondAttribute="bottom" constant="77" id="eOi-Su-cSP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oh4-7m-uvn" secondAttribute="bottom" constant="-100" id="euC-Mt-tyL"/>
+                                    <constraint firstItem="Oh4-7m-uvn" firstAttribute="top" secondItem="Cfg-Jj-xfy" secondAttribute="top" constant="-100" id="gVt-5T-ksi"/>
+                                    <constraint firstItem="Oh4-7m-uvn" firstAttribute="leading" secondItem="Cfg-Jj-xfy" secondAttribute="leading" constant="-100" id="pHY-8S-qRr"/>
+                                    <constraint firstItem="bL5-ke-U1Q" firstAttribute="top" secondItem="Cfg-Jj-xfy" secondAttribute="top" constant="234" id="zIx-3c-rWf"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="08F-XL-fyn"/>
@@ -122,18 +124,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cfg-Jj-xfy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J7p-Z5-M4I"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cfg-Jj-xfy" secondAttribute="bottom" id="liu-Bi-2Oo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cfg-Jj-xfy" secondAttribute="bottom" id="ShG-Ja-rNl"/>
                             <constraint firstAttribute="trailing" secondItem="Cfg-Jj-xfy" secondAttribute="trailing" id="rdg-cy-Amo"/>
                             <constraint firstItem="Cfg-Jj-xfy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s0K-IZ-8FG"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundImageV" destination="hsg-sJ-xR9" id="s5w-bJ-xEa"/>
+                        <outlet property="backgroundImageV" destination="Oh4-7m-uvn" id="rFo-fa-E7H"/>
                         <outlet property="loginBtn" destination="u22-zX-lj8" id="emL-da-0WK"/>
+                        <outlet property="loginBtnToBottom" destination="QTv-XT-b2s" id="e9g-Fl-2co"/>
                         <outlet property="loginLabel" destination="7Bw-Sk-FCI" id="zzy-f5-3P9"/>
                         <outlet property="passwordTextField" destination="gHY-Dg-gzD" id="Tan-B2-f4v"/>
                         <outlet property="rootScrollV" destination="Cfg-Jj-xfy" id="Tu1-Gj-fO9"/>
                         <outlet property="textBackView" destination="bL5-ke-U1Q" id="wzn-ve-u8o"/>
+                        <outlet property="textBackViewWidth" destination="O6d-5j-rWk" id="ob7-bf-SqR"/>
                         <outlet property="userNameTextField" destination="i4e-CZ-KOJ" id="AMx-gq-ALf"/>
                     </connections>
                 </viewController>
